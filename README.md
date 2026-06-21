@@ -31,12 +31,7 @@ GRANT ALL PRIVILEGES ON DATABASE aamusement TO aamusement_user;
 \q
 
 ### 4. Configure Database Connection
-sudonano into config.php and set up your database and set:
-DB_HOST=localhost
-DB_PORT=5432
-DB_NAME=aamusement
-DB_USER=aamusement_user
-DB_PASSWORD=choose-a-strong-password
+sudonano into config.php and set up your database and set up your database. It's usually not nessecary to edit the port on most occasions
 
 After this run setup.php to configure the databases! 
 And just like that, you now have a-amusement!
