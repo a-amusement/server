@@ -9,14 +9,11 @@ Where the project files for the main a-amusement server live!
 ## Instructions
 ### 1. Server Requirements
 
-PHP 8.0+ (with pdo_pgsql and pgsql extensions enabled)
-PostgreSQL 13+ server (can be on the same host or a managed DB service)
-Web server: Apache (with mod_php or PHP-FPM) or Nginx + PHP-FPM
-Composer (if the app uses any PHP dependencies)
+Prepare the pre-req's as shown above
 
 ### 2. Upload the Application
 
-Upload all project files to your hosting account, e.g. /var/www/a-amusement (or your host's public_html/web root).
+Upload all project files to your server, e.g. /var/www/a-amusement (or your host's public_html/web root).
 Ensure the web server's document root points to the app's public folder (or wherever index.php lives).
 Set correct file permissions:
 
@@ -34,13 +31,12 @@ GRANT ALL PRIVILEGES ON DATABASE aamusement TO aamusement_user;
 \q
 
 ### 4. Configure Database Connection
-Find the app's config file (commonly .env, config.php, or similar) and set:
+sudonano into config.php and set up your database and set:
 DB_HOST=localhost
 DB_PORT=5432
 DB_NAME=aamusement
 DB_USER=aamusement_user
 DB_PASSWORD=choose-a-strong-password
-5. Run the Provisioning Script at setup.php
 
-
-Use Let's Encrypt (certbot) or your host's SSL tool to enable HTTPS.
+After this run setup.php to configure the databases! 
+And just like that, you now have a-amusement!
